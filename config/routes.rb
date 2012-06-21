@@ -1,5 +1,7 @@
 Website::Application.routes.draw do
   
+  devise_for :accounts
+
   constraints(:host => /www.awsscheduler.com/) do
     root :to => redirect("http://awsscheduler.com")
     match '/*path', :to => redirect {|params| "http://awsscheduler.com/#{params[:path]}"}

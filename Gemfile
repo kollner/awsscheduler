@@ -39,3 +39,4 @@ gem 'jquery-rails'
 
 gem 'newrelic_rpm'
 gem 'twitter-bootstrap-rails'
+gem 'devise'
