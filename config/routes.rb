@@ -1,5 +1,10 @@
 Website::Application.routes.draw do
   
+  constraints(:host => /www.awsscheduler.com/) do
+    root :to => redirect("http://awsscheduler.com")
+    match '/*path', :to => redirect {|params| "http://awsscheduler.com/#{params[:path]}"}
+  end
+  
   match '/about', to: 'static_pages#about'
 
   # The priority is based upon order of creation:
