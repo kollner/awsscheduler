@@ -1,17 +1,28 @@
 <% unless flash[:notice].blank? %>
-  <div class="alert-message info">
-    <%= content_tag :div, flash[:notice] %>
-  </div>
+<div class="alert alert-info">
+  <a class="close" data-dismiss="alert" href="#">&times;</a>
+  <%= content_tag :div, flash[:notice] %>
+</div>
 <% end %>
 
 <% unless flash[:error].blank? %>
-  <div class="alert-message error">
-    <%= content_tag :div, flash[:error] %>
-  </div>
+<div class="alert alert-error">
+  <a class="close" data-dismiss="alert" href="#">&times;</a>
+  <h4 class="alert-heading">Uh oh!</h4>
+  <%= content_tag :div, flash[:error] %>
+</div>
 <% end %>
 
 <% unless flash[:alert].blank? %>
-  <div class="alert-message warning">
-    <%= content_tag :div, flash[:alert] %>
-  </div>
+<div class="alert alert-block">
+  <a class="close" data-dismiss="alert" href="#">&times;</a>
+  <%= content_tag :div, flash[:alert] %>
+</div>
+<% end %>
+
+<% unless flash[:success].blank? %>
+<div class="alert alert-success">
+  <a class="close" data-dismiss="alert" href="#">&times;</a>
+  <%= content_tag :div, flash[:success] %>
+</div>
 <% end %>

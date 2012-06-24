@@ -1,6 +1,8 @@
 Website::Application.routes.draw do
   
-  devise_for :accounts
+  devise_for :accounts, :controllers => { :sessions => "sessions",
+    :passwords => "passwords", :confirmations => "confirmations",
+    :registrations => "registrations" }
 
   constraints(:host => /www.awsscheduler.com/) do
     root :to => redirect("http://awsscheduler.com")
@@ -8,6 +10,7 @@ Website::Application.routes.draw do
   end
   
   match '/about', to: 'static_pages#about'
+  match '/pricing', to: 'static_pages#pricing'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

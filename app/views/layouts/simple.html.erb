@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<%= render :partial => 'layouts/header' %>
+  </head>
+  <body>
+    <div class="container">
+		<div class="row">
+		  <div style='margin-right: auto; margin-left: auto; width: 300px; margin-top:60px'>
+			<%= render :partial => 'layouts/flashes' %>
+			<%= devise_error_messages! %>
+		    <%= yield %>
+		  </div>
+		</div>
+    </div>
+  </body>
+</html>

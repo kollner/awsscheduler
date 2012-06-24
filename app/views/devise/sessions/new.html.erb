@@ -1,17 +1,15 @@
-<h2>Sign in</h2>
+<% content_for :title, "Sign in - AWS Scheduler" %>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
-
-  <div><%= f.submit "Sign in" %></div>
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'well'}) do |f| %>
+  <label><h6>Sign in to AWS Scheduler</h6></label>
+  <%= f.email_field :email, :placeholder => 'E-mail' %>
+	<div>
+		<%= f.password_field :password, :placeholder => 'Password' %>
+	</div>
+  <label class="checkbox">
+    <%= f.check_box :remember_me %> <%= f.label :remember_me, 'Remember me on this computer' %>
+  </label>
+  <button type="Sign in" class="btn btn-success">Sign in</button>
 <% end %>
 
 <%= render "devise/shared/links" %>
