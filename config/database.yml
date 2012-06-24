@@ -39,5 +39,5 @@ production:
   host: int.instance18254.db.xeround.com:12131
   pool: 5
   username: app5312537
-  password: 8T3Z78zkDZtPjbji
+  password: 
   socket: /tmp/mysql.sock
