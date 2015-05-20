@@ -1,5 +1,7 @@
 == Welcome to Rails
 
+{<img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/kollner/awsscheduler">}[https://gitter.im/kollner/awsscheduler?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge]
+
 Rails is a web-application framework that includes everything needed to create
 database-backed web applications according to the Model-View-Control pattern.
 
